@@ -3,12 +3,18 @@
 
 Led::Led(int pin) {
   this->pin = pin;
-
   pinMode(this->pin, OUTPUT);
 }
 
 void Led::on() {
   digitalWrite(this->pin, HIGH);
+}
+
+void Led::on(float light_force) {
+  if (light_force > 255) {
+    throw LogicalError("The light force can't be bigger than 255");
+  }
+  analogWrite(this->pin, light_force);
 }
 
 void Led::off() {

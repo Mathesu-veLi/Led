@@ -9,8 +9,6 @@ class Led
     Led(int pin);
     void on();
     void off();
-    void on_while_tmp(int tmp);
-    void off_while_tmp(int tmp);
     void blink(int times, int tmp);
 };
 

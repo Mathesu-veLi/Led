@@ -30,9 +30,11 @@ void Led::blink(int times, int tmp) {
   }
 }
 
-void blink(int times, int tmp) {
+void Led::blink(float light_force, int times, int tmp) {
   for (int i = 0; i < times; i++) {
-    on_while_tmp(tmp);
+    on(light_force);
+    delay(tmp);
+    off();
     delay(tmp);
   }
 }

@@ -1,5 +1,5 @@
 # Class Keyword
-veli_led KEYWORD1
+Led KEYWORD1
 
 # power on led method
 on KEYWORD2

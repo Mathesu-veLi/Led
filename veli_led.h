@@ -1,12 +1,12 @@
-#ifndef VELI_LED
-#define VELI_LED
+#ifndef LED
+#define LED
 
-class veli_led
+class Led
 {
   private:
     int pin;
   public:
-    veli_led(int pin);
+    Led(int pin);
     void on();
     void off();
     void on_while_tmp(int tmp);

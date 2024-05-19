@@ -1,27 +1,27 @@
 #include <Arduino.h>
-#include <veli_led.h>
+#include <Led.h>
 
-veli_led::veli_led(int pin) {
+Led::Led(int pin) {
   this->pin = pin;
 
   pinMode(this->pin, OUTPUT);
 }
 
-void veli_led::on() {
+void Led::on() {
   digitalWrite(this->pin, HIGH);
 }
 
-void veli_led::off() {
+void Led::off() {
   digitalWrite(this->pin, LOW);
 }
 
-void veli_led::on_while_tmp(int tmp) {
+void Led::on_while_tmp(int tmp) {
   on();
   delay(tmp);
   off();
 }
 
-void veli_led::off_while_tmp(int tmp) {
+void Led::off_while_tmp(int tmp) {
   off();
   delay(tmp);
   on();

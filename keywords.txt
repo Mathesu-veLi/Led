@@ -7,11 +7,5 @@ on KEYWORD2
 # power off led method
 off KEYWORD3
 
-# method to power on led for a certain time and then power it off
-on_while_tmp KEYWORD4
-
-# method to power off led for a certain time and then power it on
-off_while_tmp KEYWORD5
-
 # method to blink led
-blink KEYWORD6
+blink KEYWORD4

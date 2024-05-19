@@ -15,16 +15,13 @@ void Led::off() {
   digitalWrite(this->pin, LOW);
 }
 
-void Led::on_while_tmp(int tmp) {
-  on();
-  delay(tmp);
-  off();
-}
-
-void Led::off_while_tmp(int tmp) {
-  off();
-  delay(tmp);
-  on();
+void Led::blink(int times, int tmp) {
+  for (int i = 0; i < times; i++) {
+    on();
+    delay(tmp);
+    off();
+    delay(tmp);
+  }
 }
 
 void blink(int times, int tmp) {
